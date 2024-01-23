@@ -56,7 +56,6 @@ The correlation heatmap confirms that the number of projects, monthly hours, and
 ## Logistic Regression model and Classification Report
 Goal is to predict whether an employee leaves the company, which is a categorical outcome variable. So this task involves classification. More specifically, this involves binary classification, since the outcome variable left can be either 1 (indicating employee left) or 0 (indicating employee didn't leave).
 
-Will build Logistics regression model first and will compare which one serves the best results.
 
 ![Alt Text](https://github.com/mrunalibharshankar/Python/blob/e79d7fbc299d8b9bab2fe9dc5cdf4eb9ad84045b/LR.png)
 
@@ -66,6 +65,12 @@ Will build Logistics regression model first and will compare which one serves th
 
 The classification report above shows that the logistic regression cv model achieved a precision of 47%, recall of 25%, f1-score of 32% (all weighted averages), and accuracy of 89%. However, if it's most important to predict employees who leave, then the scores are significantly lower.
 
+## Recall evaluation metrics
+- AUC is the area under the ROC curve; it's also considered the probability that the model ranks a random positive example more highly than a random negative example.
+- Precision measures the proportion of data points predicted as True that are actually True, in other words, the proportion of positive predictions that are true positives.
+- Recall measures the proportion of data points that are predicted as True, out of all the data points that are actually True. In other words, it measures the proportion of positives that are correctly classified.
+- Accuracy measures the proportion of data points that are correctly classified.
+- F1-score is an aggregation of precision and recall.
 
 ## Build Decision Tree Model and Classification Report
 
@@ -85,14 +90,31 @@ The classification report above shows that the logistic regression cv model achi
 
 
 ## Final Results of Regression and Tree Based Models
+
+The evaluation scores of the random forest model are slightly better than those of the decision tree model, with the exception of recall (the recall score of the random forest model is approximately 0.001 lower, which is a negligible amount). This indicates that the random forest model mostly outperforms the decision tree model.
+
 ![Alt Text](https://github.com/mrunalibharshankar/Python/blob/e79d7fbc299d8b9bab2fe9dc5cdf4eb9ad84045b/Result_tb.png)
 
 ### Random forest feature importance
 ![Alt Text](https://github.com/mrunalibharshankar/Python/blob/e79d7fbc299d8b9bab2fe9dc5cdf4eb9ad84045b/RF_FI.png)
+
+The plot above shows that in this random forest model, last_evaluation, number_project, tenure, and overworked have the highest importance, in that order. These variables are most helpful in predicting the outcome variable, left, and they are the same as the ones used by the decision tree model.
+
 ### Decision Tree feature importance
+
 ![Alt Text](https://github.com/mrunalibharshankar/Python/blob/e79d7fbc299d8b9bab2fe9dc5cdf4eb9ad84045b/DT_Feature_I.png)
 
+The barplot above shows that in this decision tree model,satisfaction_level,tenure, last_evaluation, number_project, and average_monthly_hours have the highest importance, in that order. These variables are most helpful in predicting the outcome variable, left.
+
 ## Conclusion and Summary
+
+1. Logistic Regression
+
+The logistic regression model achieved precision of 80%, recall of 83%, f1-score of 80% (all weighted averages), and accuracy of 83%, on the test set.
+
+2. Tree-based Machine Learning
+
+The decision tree model achieved AUC of 95.65%, precision of 97.59%, recall of 90.4%, f1-score of 94.58%, and accuracy of 98.23%, on the test set. The random forest modestly outperformed the decision tree model.
 
 
   
