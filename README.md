@@ -42,13 +42,23 @@ We have used Jupiter Notebook of Anaconda to evaluate and build the model in pyt
 The data is looking like this,
 ![Alt Text](https://github.com/mrunalibharshankar/Python/blob/bb2702859046781e845ed7bdbb66d134d9039946/Dataset.png)
 
-## Data Exploration (Initial EDA and data cleaning)
+## Initial EDA and data cleaning
+Examining and visualizing data to understand its characteristics, uncover patterns, and identify potential insights.
+1. Basic Info
+2. Descriptive Statistic
+3. Missing Values
+4. Univariate Analysis
+5. Bivariate Analysis
 
-## Data Exploration
+![Alt Text](https://github.com/mrunalibharshankar/Python/blob/1ea48cfab548f3e9e90d190d6383d5954fd0d183/EDA_basic.png)
+![Alt Text](https://github.com/mrunalibharshankar/Python/blob/1ea48cfab548f3e9e90d190d6383d5954fd0d183/Outliers.png)
+![Alt Text](https://github.com/mrunalibharshankar/Python/blob/1ea48cfab548f3e9e90d190d6383d5954fd0d183/Outliers_info.png)
 
-## Data visualizations
+### Data Exploration
 
-## Correlations between variables
+### Data visualizations
+
+### Correlations between variables
 
 ## Splitting data into X and y variables
 
