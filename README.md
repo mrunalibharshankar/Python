@@ -26,12 +26,21 @@ The data file has 10 columns with names:
 9. Department
 10. salary
 
-The original files were exported from the [Kaggle](https://www.kaggle.com/datasets/mrunalibharshankar/hr-employee-retention#:~:text=HR_capstone_dataset.-,csv,-Summary), and are available in this repository as an [.CSV file](https://github.com/mrunalibharshankar/Python/blob/98905f38ef3704a651371c66b1cb6c6f71452c46/HR_capstone_dataset.csv) document.
-
-
+The original files were exported from the [Kaggle](https://www.kaggle.com/datasets/mrunalibharshankar/hr-employee-retention#:~:text=HR_capstone_dataset.-,csv,-Summary), and is available in this repository as an [.CSV file](https://github.com/mrunalibharshankar/Python/blob/98905f38ef3704a651371c66b1cb6c6f71452c46/HR_capstone_dataset.csv) document.
 
 
 ## Importing relevant libraries and packages
+We have used Jupiter Notebook of Anaconda to evaluate and build the model in python. Started off with importing relevant libraries and packages:
+1. For data manipulation: Numpy and Pandas
+2. For data visualization: Matplotlib.pyplot and Seaborn
+3. For data modeling: XGboost(XGBClassifier, XGBRegressor, plot_importance), sklearn.linear_model(LogisticRegression), sklearn.tree(DecisionTreeClassifier), sklearn.ensemble(RandomForestClassifier)
+4. For metrics and helpful functions: sklearn.model_selection(GridSearchCV, train_test_split), sklearn.metrics(accuracy_score, precision_score, recall_score,roc_auc_score, roc_curve, f1_score, confusion_matrix, ConfusionMatrixDisplay, classification_report), sklearn.tree(plot_tree)
+5. For saving models: pickle
+
+![Alt Text](https://github.com/mrunalibharshankar/Python/blob/bb2702859046781e845ed7bdbb66d134d9039946/Imports.png)
+
+The data is looking like this,
+![Alt Text](https://github.com/mrunalibharshankar/Python/blob/bb2702859046781e845ed7bdbb66d134d9039946/Dataset.png)
 
 ## Data Exploration (Initial EDA and data cleaning)
 
