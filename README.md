@@ -37,12 +37,10 @@ We have used Jupiter Notebook of Anaconda to evaluate and build the model in pyt
 4. For metrics and helpful functions: sklearn.model_selection(GridSearchCV, train_test_split), sklearn.metrics(accuracy_score, precision_score, recall_score,roc_auc_score, roc_curve, f1_score, confusion_matrix, ConfusionMatrixDisplay, classification_report), sklearn.tree(plot_tree)
 5. For saving models: pickle
 
-![Alt Text](https://github.com/mrunalibharshankar/Python/blob/bb2702859046781e845ed7bdbb66d134d9039946/Imports.png)
-
 The data is looking like this,
 ![Alt Text](https://github.com/mrunalibharshankar/Python/blob/bb2702859046781e845ed7bdbb66d134d9039946/Dataset.png)
 
-## Initial EDA and data cleaning
+## Data Exploration(Initial EDA, data cleaning and data visualization)
 Examining and visualizing data to understand its characteristics, uncover patterns, and identify potential insights.
 1. Basic Info
 2. Descriptive Statistic
@@ -50,98 +48,52 @@ Examining and visualizing data to understand its characteristics, uncover patter
 4. Univariate Analysis
 5. Bivariate Analysis
 
-![Alt Text](https://github.com/mrunalibharshankar/Python/blob/1ea48cfab548f3e9e90d190d6383d5954fd0d183/EDA_basic.png)
-![Alt Text](https://github.com/mrunalibharshankar/Python/blob/1ea48cfab548f3e9e90d190d6383d5954fd0d183/Outliers.png)
-![Alt Text](https://github.com/mrunalibharshankar/Python/blob/1ea48cfab548f3e9e90d190d6383d5954fd0d183/Outliers_info.png)
+## Correlations between variables
+The correlation heatmap confirms that the number of projects, monthly hours, and evaluation scores and to some extend tenure all have some positive correlation with each other, and whether an employee leaves is negatively correlated with their satisfaction level.
 
-### Data Exploration
-
-### Data visualizations
-
-### Correlations between variables
-
-## Splitting data into X and y variables
-
+![Alt Text](https://github.com/mrunalibharshankar/Python/blob/e79d7fbc299d8b9bab2fe9dc5cdf4eb9ad84045b/Heatmap.png)
 
 ## Logistic Regression model and Classification Report
+Goal is to predict whether an employee leaves the company, which is a categorical outcome variable. So this task involves classification. More specifically, this involves binary classification, since the outcome variable left can be either 1 (indicating employee left) or 0 (indicating employee didn't leave).
+
+Will build Logistics regression model first and will compare which one serves the best results.
+
+![Alt Text](https://github.com/mrunalibharshankar/Python/blob/e79d7fbc299d8b9bab2fe9dc5cdf4eb9ad84045b/LR.png)
 
 ## Cross Validation with k-fold
+
+![Alt Text](https://github.com/mrunalibharshankar/Python/blob/e79d7fbc299d8b9bab2fe9dc5cdf4eb9ad84045b/LR_CV.png)
+
+The classification report above shows that the logistic regression cv model achieved a precision of 47%, recall of 25%, f1-score of 32% (all weighted averages), and accuracy of 89%. However, if it's most important to predict employees who leave, then the scores are significantly lower.
 
 
 ## Build Decision Tree Model and Classification Report
 
+![Alt Text](https://github.com/mrunalibharshankar/Python/blob/e79d7fbc299d8b9bab2fe9dc5cdf4eb9ad84045b/DT.png)
+
 ## Cross-validated with grid-search
+
+![Alt Text]()
 
 ## Built Random Forest Model and Classification Report
 
+![Alt Text](https://github.com/mrunalibharshankar/Python/blob/e79d7fbc299d8b9bab2fe9dc5cdf4eb9ad84045b/RF.png)
+
 ## Cross-validated with grid-search
+
+![Alt Text]()
 
 
 ## Final Results of Regression and Tree Based Models
+![Alt Text](https://github.com/mrunalibharshankar/Python/blob/e79d7fbc299d8b9bab2fe9dc5cdf4eb9ad84045b/Result_tb.png)
 
 ### Random forest feature importance
+![Alt Text](https://github.com/mrunalibharshankar/Python/blob/e79d7fbc299d8b9bab2fe9dc5cdf4eb9ad84045b/RF_FI.png)
 ### Decision Tree feature importance
-
+![Alt Text](https://github.com/mrunalibharshankar/Python/blob/e79d7fbc299d8b9bab2fe9dc5cdf4eb9ad84045b/DT_Feature_I.png)
 
 ## Conclusion and Summary
 
-
-- Added [total_counter] column by using countif() function of excel to count the duplicate records against the CustomerId column which represents the unique records.
-  
-![Alt Text](https://github.com/mrunalibharshankar/RegressionAnalysis/blob/94fa03a3d1f4c10b5b602dc80acde987232b5910/total_counter.png)
-
-# Pivot Analysis
-- Created new field list ChurnRate by dividing [Exited]/[total_counter] to find out [Sum_of_Churnrate]
-- First analysis was to draw conclusion of [NoOfProducts] against [ChurnRate] and [CreditScore]
-  
-![Alt Text](https://github.com/mrunalibharshankar/RegressionAnalysis/blob/6d9b6a9250941794aa4b910593eb6d9804a586f7/Pivot1.png)
-
-- Likewise we have created pivot table for [Tenure], [Gender] and [Georgraphy] with [ChurnRate] and [CreditScore]
-
-![Alt Text](https://github.com/mrunalibharshankar/RegressionAnalysis/blob/4e3b8f96549da6884b37e2921602a80bc79d9732/Pivot2.png)
-
-![Alt Text](https://github.com/mrunalibharshankar/RegressionAnalysis/blob/4e3b8f96549da6884b37e2921602a80bc79d9732/Pivot3.png)
-
-![Alt Text](https://github.com/mrunalibharshankar/RegressionAnalysis/blob/4e3b8f96549da6884b37e2921602a80bc79d9732/Pivot4.png)
-
-- Conclusion drawn is,
-  - the highest no of products holder are tend to exit.
-  - Initial years(0, 1) customers ChurnRate is the highest.
-  - Female customers ChurnRate compared to Male is highest.
-  - Geographically, Germany's ChurnRate is highest against Spain and France.
-
-With this information we can come up with the best subscription plans for these users.  
-
-
-# Regression Analysis
-- The target variable(dependent variable) is [Exited] to analysis the best independent variable explains about this variable we performed statistic regression using Data analysis in built tool in Excel.
-
-![Alt Text](https://github.com/mrunalibharshankar/RegressionAnalysis/blob/8eacec2c83b182301b9bfa681adfbde0396cc589/RegressionS1.png)
-
-![Alt Text](https://github.com/mrunalibharshankar/RegressionAnalysis/blob/8eacec2c83b182301b9bfa681adfbde0396cc589/RegressionS2.png)
-
-![Alt Text](https://github.com/mrunalibharshankar/RegressionAnalysis/blob/8eacec2c83b182301b9bfa681adfbde0396cc589/RegM1.png)
-![Alt Text](https://github.com/mrunalibharshankar/RegressionAnalysis/blob/fd64072f167827c116dd25cb6589694c1304abc2/RegOutput.png)
-
-
-# Conclusion:  
-1. Statistical Significance: A coefficient is considered statistically significant if its p-value is below a predetermined significance level (e.g., 0.05).
-   In this case, **p-value of CreditScore is 0.007** (< 0.05), it determined the significant relationship between CredtiScore(independent variable) and Exited (dependent variable).
-
-![Alt Text](https://github.com/mrunalibharshankar/RegressionAnalysis/blob/8eacec2c83b182301b9bfa681adfbde0396cc589/RegFinalM.png)
-
-2. Coefficient Interpretation: The sign and magnitude of the coefficients are interpreted.
-   In our case, **coefficients is -0.0002** which indicates a negative relationship.
-3. R-squared metrics: A higher R-squared value(ranges from 0 to 1) suggests that the independent variables explain a larger proportion of the variance in the dependent variable. R-squared of CreditScore is **0.0008** is 0.08% proportion of variance in Exited variable which is very very less but better than other variables to consider.
-   
-4. Model Fit: To determine the coefficients that result in the smallest residual sum of squares (the sum of the squared differences between observed and predicted values). 
-![Alt Text](https://github.com/mrunalibharshankar/RegressionAnalysis/blob/fd64072f167827c116dd25cb6589694c1304abc2/BestfitlineGraph.png)
-
-    
-# Further Analysis
- The target variable was in binary form(0,1) so the better analysis can be done in Logistic Regression with different evaluation metrics.
-
-  
 
   
 
