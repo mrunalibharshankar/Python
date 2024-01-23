@@ -31,7 +31,42 @@ The original files were exported from the [Kaggle](https://www.kaggle.com/datase
 
 
 
-## Transforming Variable
+## Importing relevant libraries and packages
+
+## Data Exploration (Initial EDA and data cleaning)
+
+## Data Exploration
+
+## Data visualizations
+
+## Correlations between variables
+
+## Splitting data into X and y variables
+
+
+## Logistic Regression model and Classification Report
+
+## Cross Validation with k-fold
+
+
+## Build Decision Tree Model and Classification Report
+
+## Cross-validated with grid-search
+
+## Built Random Forest Model and Classification Report
+
+## Cross-validated with grid-search
+
+
+## Final Results of Regression and Tree Based Models
+
+### Random forest feature importance
+### Decision Tree feature importance
+
+
+## Conclusion and Summary
+
+
 - Added [total_counter] column by using countif() function of excel to count the duplicate records against the CustomerId column which represents the unique records.
   
 ![Alt Text](https://github.com/mrunalibharshankar/RegressionAnalysis/blob/94fa03a3d1f4c10b5b602dc80acde987232b5910/total_counter.png)
